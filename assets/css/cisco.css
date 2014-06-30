@@ -1,0 +1,460 @@
+body.has-cloud {
+  /*To hide the horizontal scroller appearing during the animation*/
+  overflow: hidden;
+}
+#clouds {
+  padding: 100px 0;
+  background: #c9dbe9;
+  background: -webkit-linear-gradient(top, #c9dbe9 0%, #ffffff 100%);
+  background: -linear-gradient(top, #c9dbe9 0%, #ffffff 100%);
+  background: -moz-linear-gradient(top, #c9dbe9 0%, #ffffff 100%);
+}
+/*Time to finalise the cloud shape*/
+.cloud {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  position: relative;
+}
+.cloud:before,
+.cloud:after {
+  content: '';
+  background: #fff;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px;
+}
+/*Time to animate*/
+.x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6;
+  /*opacity proportional to the size*/
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+}
+.x3 {
+  left: -250px;
+  top: -200px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8;
+  /*opacity proportional to the size*/
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+.x4 {
+  left: 470px;
+  top: -250px;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75;
+  /*opacity proportional to the size*/
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite;
+}
+.x5 {
+  left: -150px;
+  top: -150px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8;
+  /*opacity proportional to the size*/
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+/* stick footer mode */
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -37px;
+}
+#main.container {
+  padding-bottom: 150px;
+}
+#push,
+#footer {
+  height: 37px;
+}
+#footer {
+  background: #5bacc7;
+  position: relative;
+  z-index: 2;
+}
+#footer p {
+  color: #fff;
+  font-size: 12px;
+  padding-top: 10px;
+}
+#footer .cloudWrap {
+  width: 270px;
+  height: 90px;
+  position: absolute;
+  top: -65px;
+  left: 50px;
+  overflow: hidden;
+}
+#footer .cloud {
+  position: absolute;
+  top: 0px;
+  left: 75px;
+  background: #5bacc7;
+  width: 90px;
+  height: 90px;
+}
+#footer .cloud:before,
+#footer .cloud:after {
+  width: 90px;
+  height: 90px;
+  background: #5bacc7;
+  top: 20px;
+}
+#footer .cloud:after {
+  left: -70px;
+}
+#footer .cloud:before {
+  left: 70px;
+}
+.navbar-header {
+  background: transparent url('../img/bg-brand.png') no-repeat scroll left top;
+  width: 174px;
+  height: 174px;
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+}
+.navbar-header .navbar-brand {
+  margin-top: 80px;
+  margin-left: 22px!important;
+  width: 123px;
+  height: 86px;
+  display: block;
+  background: transparent url('../img/brand-md.png') no-repeat scroll left top;
+}
+.primaryNav {
+  margin-bottom: 130px;
+  height: 128px;
+}
+.primaryNav:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent url('../img/bg-mkt.png') repeat-x scroll left top;
+  height: 128px;
+  position: absolute;
+  z-index: 2;
+}
+.primaryNav .navbar-nav {
+  margin: 127px 114px 0 0;
+}
+.primaryNav .navbar-nav > li + li {
+  background-color: #7bc844;
+}
+.primaryNav .navbar-nav > li + li + li {
+  background-color: #C8B344;
+}
+.primaryNav .navbar-nav > li {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #ff77ac;
+  margin: 10px;
+  text-align: center;
+  -webkit-transition: margin-top 1s;
+  -o-transition: margin-top 1s;
+  transition: margin-top 1s;
+}
+.primaryNav .navbar-nav > li:hover {
+  margin-top: 30px;
+}
+.primaryNav .navbar-nav > li:before {
+  content: " ";
+  display: block;
+  border-left: 1px solid #fff;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: 85%;
+  top: auto;
+}
+.primaryNav .navbar-nav > li > a {
+  padding: 0px;
+  line-height: 70px;
+  color: #fff;
+}
+.primaryNav .navbar-nav > li > a:hover {
+  background: transparent;
+}
+.secondaryNav li {
+  background: #fff;
+  padding: 0px;
+}
+.secondaryNav li.active a {
+  color: #47a6ea;
+  background: transparent;
+}
+.secondaryNav li.active a:after {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 100%;
+  background: #47a6ea;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-bottom: 13px solid #fff;
+  border-top: 13px solid #fff;
+}
+.secondaryNav li.active a:focus,
+.secondaryNav li.active a:hover {
+  color: #47a6ea;
+  background-color: transparent!important;
+}
+.secondaryNav li a {
+  padding: 30px 30px;
+  color: #8eb2b3;
+  background: transparent;
+}
+.secondaryNav .label {
+  color: #777777;
+  display: block;
+  background-color: transparent;
+}
+#search {
+  padding-bottom: 64px;
+}
+#search .glyphicon-search {
+  position: absolute;
+  z-index: 3;
+  left: 12px;
+  top: 9px;
+  color: #69bacd;
+}
+#search .form-control {
+  padding-left: 35px;
+  border-radius: 5px;
+  border: none;
+}
+#search .input-group-btn {
+  left: -5px;
+  z-index: 2;
+}
+#search button {
+  border: none;
+  background: #f55734;
+  color: #FFF;
+  text-shadow: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #f55734;
+}
+#rPnl {
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  left: auto;
+  right: 0px;
+  background: #d29f43;
+  color: #fff;
+  padding: 40px 10px;
+  height: 100%;
+  list-style: none;
+}
+#rPnl:after {
+  content: " ";
+  display: block;
+  width: 12px;
+  height: 100%;
+  background: transparent url('../img/wave.png') repeat-y scroll left top;
+  position: absolute;
+  left: -12px;
+  top: 0px;
+}
+#rPnl li {
+  padding: 10px 5px;
+}
+#rPnl li a {
+  color: #fff;
+}
+#rPnl li a:hover {
+  color: #5E3E32;
+}
+#userPnl {
+  width: 230px;
+  height: 230px;
+  border-radius: 230px;
+  background: #d4cdc3;
+  margin-top: 0px;
+  margin-right: 0px;
+  position: absolute;
+  right: 8px;
+  top: -35px;
+  z-index: 2;
+}
+#userPnl .inner {
+  width: 230px;
+  height: 230px;
+  border-radius: 230px;
+  background: #fff;
+  margin: -4px 0 0 -8px;
+  padding: 90px 0 0 53px;
+}
+#userPnl .dropdown {
+  margin-left: 20px;
+}
+#userPnl .cirle {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  background: #14fa14;
+}
+#userPnl .caret {
+  border-top-color: #c5c5c5;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+#userPnl .avater {
+  width: 83px;
+  height: 83px;
+  font-size: 80px;
+  margin-left: 25px;
+  border-radius: 12px;
+  border: 3px solid #5bacc7;
+  overflow: hidden;
+  color: #5bacc7;
+}
+#userPnl b {
+  padding: 0px 0px 0px 6px;
+  line-height: 2em;
+  font-size: 12px;
+}
+#userPnl .status .btn {
+  background: none;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+}
+.app-list .thumbnail {
+  padding: 2px;
+  height: 163px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.app-list .thumbnail .caption {
+  padding: 12px 0px 0px 0px;
+  position: relative;
+  color: #fff;
+}
+.app-list .thumbnail .caption .btn {
+  position: absolute;
+  left: 50%;
+  top: -1em;
+  margin-left: -0.5em;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  padding: 0px;
+  box-shadow: none;
+  font-size: 2em;
+}
+.app-list .thumbnail .caption p {
+  padding: 0px;
+  margin: 0px;
+}
+/* clean mode */
+.has-cloud #footer {
+  display: none;
+}
+.login {
+  display: block;
+}
+.brand {
+  height: 205px;
+  background: transparent url('../img/brand.png') no-repeat scroll left top;
+}
+.book {
+  background: #fff;
+  border: 4px solid #d93826;
+}
+/* layout background */
+body.mkt {
+  background: #69bacd;
+}
+@media (max-width: 768px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/*# sourceMappingURL=cisco.css.map */
